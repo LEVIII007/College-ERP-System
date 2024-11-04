@@ -69,7 +69,7 @@ function UpdateStudentModal({ show, handleClose, student, setMessage, handleShow
 
         setValidated(true);
         setLoading(true);
-        const response = await fetch(`http://localhost:5173/api/students/${student._id}`, {
+        const response = await fetch(`http://localhost:5173/api/students/${student.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -151,7 +151,7 @@ function UpdateStudentModal({ show, handleClose, student, setMessage, handleShow
                             >
                                 <option value="">Select a course...</option>
                                 {courses.map(course => (
-                                    <option key={course._id} value={course._id}>{course.name}</option>
+                                    <option key={course.id} value={course.id}>{course.name}</option>
                                 ))}
                             </Form.Select>
                             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>

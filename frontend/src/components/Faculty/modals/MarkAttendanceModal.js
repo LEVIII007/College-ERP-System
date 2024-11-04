@@ -125,17 +125,17 @@ function MarkAttendanceModal({ show, handleClose, students, totalAttendance, set
                                 .map(student => (
                                     <div
                                         className='d-flex bg-hover-div'
-                                        key={student._id}
+                                        key={student.id}
                                         role='button'
                                     >
-                                        <Row className="w-100" onClick={() => handleCheckboxChange(student._id)}>
+                                        <Row className="w-100" onClick={() => handleCheckboxChange(student.id)}>
                                             <Col xs={1} className="pt-4">
                                                 <Form.Check
                                                     className='px-3'
                                                     type="checkbox"
-                                                    id={student._id}
-                                                    onChange={() => handleCheckboxChange(student._id)}
-                                                    checked={selectedStudents.includes(student._id)}
+                                                    id={student.id}
+                                                    onChange={() => handleCheckboxChange(student.id)}
+                                                    checked={selectedStudents.includes(student.id)}
                                                 ></Form.Check>
                                             </Col>
                                             <Col xs={6} className="p-4">

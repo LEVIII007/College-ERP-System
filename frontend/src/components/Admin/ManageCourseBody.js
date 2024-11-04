@@ -67,7 +67,7 @@ function ManageCoursesBody() {
     }, [modalUpdated]);
 
     useEffect(() => {
-        const filtered = courses.filter(course => course.name.includes(searchName));
+        const filtered = courses.filter(course => course.course_name.includes(searchName));
         setFilteredCourses(filtered);
     }, [searchName, courses]);
 
@@ -146,13 +146,13 @@ function ManageCoursesBody() {
                                 .map(course => (
                                     <div
                                         className='d-flex bg-hover-div'
-                                        key={course._id}
+                                        key={course.id}
                                         role='button'
                                         onClick={() => handleShowUpdateCourseModal(course)}
                                     >
                                         <Row className="w-100">
                                             <Col xs={5} className="p-3">
-                                                <p className="px-3 mb-0 fw-bold">{course.name}</p>
+                                                <p className="px-3 mb-0 fw-bold">{course.course_name}</p>
                                             </Col>
                                             <Col xs={5} className="p-3">
                                                 <div className="overflow-auto" style={{ maxWidth: "100%", maxHeight: "3rem" }}>

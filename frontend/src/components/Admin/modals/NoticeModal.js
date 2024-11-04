@@ -119,7 +119,7 @@ function NoticeModal({ show, handleClose, setMessage, handleShowToast }) {
                                 .map(notice => (
                                     <div
                                         className='d-flex bg-hover-div'
-                                        key={notice._id}
+                                        key={notice.id}
                                         role='button'
                                     >
                                         <Row className="w-100">

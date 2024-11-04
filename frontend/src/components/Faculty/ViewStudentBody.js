@@ -47,7 +47,7 @@ function ViewStudentBody() {
         const filtered = students.filter(student => student.email.includes(searchEmail));
         setFilteredStudents(filtered.map(student => ({
             ...student,
-            courseName: courses.find(course => course._id === student.course)?.name
+            courseName: courses.find(course => course.id === student.course)?.name
         })));
     }, [searchEmail, students, courses]);
 
@@ -82,7 +82,7 @@ function ViewStudentBody() {
                             .map(student => (
                                 <div
                                     className='d-flex bg-hover-div'
-                                    key={student._id}
+                                    key={student.id}
                                     role='button'
                                 >
                                     <Row className="w-100">

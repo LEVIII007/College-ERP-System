@@ -126,7 +126,7 @@ function ViewAttendanceBody() {
                         <div className="scrollable-container" style={{ height: '200px', overflowY: 'auto' }}>
                             <div
                                 className='d-flex bg-hover-div'
-                                key={student._id}
+                                key={student.id}
                                 role='button'
                             >
                                 <Row className="w-100">

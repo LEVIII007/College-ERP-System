@@ -81,7 +81,7 @@ function ManageProfileBody() {
 
         setValidated(true);
         setLoading(true);
-        const response = await fetch(`http://localhost:5173/api/students/${student._id}`, {
+        const response = await fetch(`http://localhost:5173/api/students/${student.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

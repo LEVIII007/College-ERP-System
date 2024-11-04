@@ -146,7 +146,7 @@ function ManageFacultyBody() {
                 .map(faculty => (
                   <div
                     className='d-flex bg-hover-div'
-                    key={faculty._id}
+                    key={faculty.id}
                     role='button'
                     onClick={() => handleShowUpdateFacultyModal(faculty)}
                   >

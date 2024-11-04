@@ -43,7 +43,7 @@ function UpdateFacultyModal({ show, handleClose, faculty, setMessage, handleShow
 
         setValidated(true);
         setLoading(true);
-        const response = await fetch(`http://localhost:5173/api/faculty/${faculty._id}`, {
+        const response = await fetch(`http://localhost:5173/api/faculty/${faculty.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
